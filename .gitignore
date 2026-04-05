@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+
+# Data — raw scrape cache (large, regeneratable)
+data/raw/
+
+# macOS
+.DS_Store
+
+# Playwright
+playwright/.local-browsers/
+
+# IDE
+.idea/
+.vscode/

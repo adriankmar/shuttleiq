@@ -1,0 +1,191 @@
+player_id,name,nationality,current_world_ranking,matches_played,win_rate
+lin-chun-yi,LIN Chun-Yi,TPE,1,135,0.6296
+alwi-farhan,Alwi FARHAN,INA,2,71,0.6338
+kunlavut-vitidsarn,Kunlavut VITIDSARN,THA,3,124,0.7339
+lakshya-sen,Lakshya SEN,IND,4,102,0.5588
+yushi-tanaka,Yushi TANAKA,JPN,5,81,0.5185
+chi-yu-jen,CHI Yu Jen,TPE,6,88,0.4659
+chou-tien-chen,CHOU Tien Chen,TPE,7,175,0.6229
+loh-kean-yew,LOH Kean Yew,SGP,8,118,0.5678
+jia-heng-jason-teh,Jia Heng Jason TEH,SGP,9,77,0.5195
+christo-popov,Christo POPOV,FRA,10,105,0.581
+jonatan-christie,Jonatan CHRISTIE,INA,11,120,0.7083
+tharun-mannepalli,Tharun MANNEPALLI,IND,12,33,0.4545
+toma-junior-popov,Toma Junior POPOV,FRA,13,96,0.5
+jason-gunawan,Jason GUNAWAN,HKG,14,54,0.537
+victor-lai,Victor LAI,CAN,15,27,0.5926
+koki-watanabe,Koki WATANABE,JPN,16,90,0.5556
+nhat-nguyen,Nhat NGUYEN,IRL,17,68,0.4265
+kidambi-srikanth,KIDAMBI Srikanth,IND,18,72,0.4722
+kiran-george,Kiran GEORGE,IND,19,67,0.3582
+alex-lanier,Alex LANIER,FRA,20,81,0.679
+brian-yang,Brian YANG,CAN,21,85,0.3529
+panitchaphon-teeraratsakul,Panitchaphon TEERARATSAKUL,THA,22,33,0.6061
+wang-tzu-wei,WANG Tzu Wei,TPE,23,106,0.4057
+wang-zheng-xing,WANG Zheng Xing,CHN,24,48,0.4792
+ayush-shetty,Ayush SHETTY,IND,25,56,0.4821
+aaron-sonnenschein,Aaron SONNENSCHEIN,GER,,1,0.0
+abhinav-thakur,Abhinav THAKUR,IND,,1,0.0
+abhishek-yeligar,Abhishek YELIGAR,IND,,1,0.0
+ade-resky-dwicahyo,Ade Resky DWICAHYO,AZE,,7,0.1429
+alap-mishra,Alap MISHRA,IND,,4,0.25
+anders-antonsen,Anders ANTONSEN,DEN,,127,0.6929
+anthony-sinisuka-ginting,Anthony Sinisuka GINTING,INA,,79,0.5823
+aria-dinata,Aria DINATA,CRO,,1,0.0
+arnaud-merkle,Arnaud MERKLE,FRA,,33,0.3636
+arya-bhivpathaki,Arya BHIVPATHAKI,IND,,1,0.0
+asher-jing-jie-ooi,Asher Jing Jie OOI,AUS,,2,0.5
+b-m-rahul-bharadwaj,B.M.Rahul BHARADWAJ,IND,,2,0.5
+bharat-raghav,Bharat RAGHAV,IND,,1,0.0
+chan-yin-chak,CHAN Yin Chak,HKG,,9,0.1111
+cheam-june-wei,CHEAM June Wei,MAS,,24,0.2917
+chen-chi-ting,CHEN Chi Ting,TPE,,1,0.0
+cheng-kai,CHENG Kai,TPE,,1,0.0
+cho-geon-yeop,CHO Geon Yeop,KOR,,7,0.7143
+cho-hyeon-woo,CHO Hyeon Woo,KOR,,2,0.5
+choi-jihoon,CHOI JIHOON,KOR,,1,0.0
+choi-pyeong-gang,CHOI Pyeong Gang,KOR,,1,0.0
+chico-aura-dwi-wardoyo,Chico Aura DWI WARDOYO,,,50,0.38
+chirag-sen,Chirag SEN,IND,,4,0.0
+christian-adinata,Christian ADINATA,INA,,3,0.3333
+collins-valentine-filimon,Collins Valentine FILIMON,AUT,,2,0.5
+danylo-bosniuk,DANYLO BOSNIUK,UKR,,1,0.0
+do-dong-wook,DO Dong Wook,KOR,,1,0.0
+dong-tian-yao,DONG Tian Yao,CHN,,4,0.5
+daniil-dubovenko,Daniil DUBOVENKO,ISR,,12,0.3333
+dicky-dwi-pangestu,Dicky Dwi PANGESTU,AZE,,1,0.0
+ditlev-jaeger-holm,Ditlev Jaeger HOLM,DEN,,6,0.5
+dmitriy-panarin,Dmitriy PANARIN,KAZ,,9,0.2222
+edward-lau,Edward LAU,NZL,,2,0.0
+enogat-roy,Enogat ROY,FRA,,6,0.1667
+enrico-keoni-asuncion,Enrico Keoni ASUNCION,USA,,2,0.0
+eogene-ewe,Eogene EWE,MAS,,4,0.5
+fabian-roth,Fabian ROTH,GER,,4,0.0
+fabio-caponio,Fabio CAPONIO,ITA,,1,1.0
+garret-tan,Garret TAN,USA,,1,0.0
+giovanni-toti,Giovanni TOTI,ITA,,7,0.2857
+heo-kwang-hee,HEO Kwang Hee,KOR,,2,0.5
+hu-zhe-an,HU Zhe An,CHN,,9,0.5556
+huang-ping-hsien,HUANG Ping-Hsien,TPE,,10,0.2
+huang-yu-kai,HUANG Yu Kai,TPE,,22,0.1818
+hans-kristian-solberg-vittinghus,Hans-Kristian Solberg VITTINGHUS,DEN,,5,0.2
+harry-huang,Harry HUANG,ENG,,7,0.4286
+howard-shu,Howard SHU,USA,,1,0.0
+jeon-hyeok-jin,JEON Hyeok Jin,KOR,,51,0.4314
+jeong-min-seon,JEONG Min Seon,KOR,,3,0.3333
+jack-yu,Jack YU,AUS,,1,0.0
+jakob-houe,Jakob HOUE,DEN,,1,0.0
+jayden-lim,Jayden LIM,AUS,,1,0.0
+jie-ying-chan,Jie Ying CHAN,AUS,,1,0.0
+joakim-oldorff,Joakim OLDORFF,FIN,,17,0.1176
+jonathan-matias,Jonathan MATIAS,BRA,,7,0.2857
+joran-kweekel,Joran KWEEKEL,NED,,2,0.0
+julien-carraggi,Julien CARRAGGI,BEL,,37,0.2162
+julien-scheiwiller,Julien SCHEIWILLER,SUI,,1,0.0
+justin-hoh,Justin HOH,MAS,,44,0.4091
+kim-byung-jae,KIM Byung Jae,KOR,,2,0.0
+kim-donghun,KIM DongHun,KOR,,2,0.5
+kok-jing-hong,KOK Jing Hong,MAS,,9,0.3333
+kuo-kuan-lin,KUO Kuan Lin,TPE,,11,0.4545
+kai-schaefer,Kai SCHAEFER,GER,,5,0.2
+kalle-koljonen,Kalle KOLJONEN,FIN,,28,0.2857
+kanta-tsuneyama,Kanta TSUNEYAMA,JPN,,34,0.4412
+kantaphon-wangcharoen,Kantaphon WANGCHAROEN,THA,,71,0.2676
+karono-karono,Karono KARONO,AUS,,1,0.0
+kartikey-gulshan-kumar,Kartikey GULSHAN KUMAR,IND,,1,0.0
+kavin-thangam-kavin,Kavin Thangam KAVIN,IND,,1,0.0
+kenta-nishimoto,Kenta NISHIMOTO,JPN,,125,0.536
+kento-momota,Kento MOMOTA,JPN,,13,0.4615
+kevin-cordon,Kevin CORDON,GUA,,3,0.3333
+kian-yu-oei,Kian-Yu OEI,GER,,1,0.0
+kodai-naraoka,Kodai NARAOKA,JPN,,126,0.627
+koo-takahashi,Koo TAKAHASHI,JPN,,34,0.4412
+le-duc-phat,LE Duc Phat,VIE,,7,0.2857
+lee-cheuk-yiu,LEE Cheuk Yiu,HKG,,95,0.4737
+lee-chia-hao,LEE Chia Hao,TPE,,93,0.3978
+lee-yun-gyu,LEE Yun Gyu,KOR,,2,0.0
+lee-zii-jia,LEE Zii Jia,MAS,,85,0.6
+lei-lan-xi,LEI Lan Xi,CHN,,58,0.3966
+leong-jun-hao,LEONG Jun Hao,MAS,,75,0.4
+li-shi-feng,LI Shi Feng,CHN,,115,0.6783
+liao-jhuo-fu,LIAO Jhuo-Fu,TPE,,22,0.4091
+liew-daren,LIEW Daren,MAS,,3,0.3333
+liu-liang,LIU Liang,CHN,,5,0.6
+lu-guang-zu,LU Guang Zu,CHN,,98,0.5102
+lakshay-sharma,Lakshay SHARMA,IND,,1,0.0
+lucas-claerbout,Lucas CLAERBOUT,FRA,,5,0.4
+luis-armando-montoya-navarro,Luis Armando MONTOYA NAVARRO,MEX,,1,0.0
+luis-ramon-garrido,Luis Ramon GARRIDO,MEX,,1,0.0
+luka-wraber,Luka WRABER,AUT,,1,1.0
+lu-s-enrique-pe-alver,Luís Enrique PEÑALVER,ESP,,3,0.0
+mads-christophersen,Mads CHRISTOPHERSEN,DEN,,22,0.3182
+magnus-johannesen,Magnus JOHANNESEN,DEN,,52,0.3654
+manraj-singh,Manraj SINGH,IND,,5,0.4
+mark-caljouw,Mark CALJOUW,NED,,11,0.3636
+matthias-kicklitz,Matthias KICKLITZ,GER,,5,0.4
+max-weisskirchen,Max WEISSKIRCHEN,GER,,3,0.0
+meiraba-luwang-maisnam,Meiraba Luwang MAISNAM,IND,,9,0.4444
+mikolaj-szymanowski,Mikolaj SZYMANOWSKI,POL,,1,0.0
+minoru-koga,Minoru KOGA,JPN,,8,0.625
+misha-zilberman,Misha ZILBERMAN,ISR,,26,0.2308
+mithun-manjunath,Mithun MANJUNATH,IND,,23,0.3043
+moh-zaki-ubaidillah,Moh. Zaki UBAIDILLAH,INA,,20,0.55
+muhamad-yusuf,Muhamad YUSUF,INA,,2,0.0
+ng-ka-long-angus,NG Ka Long Angus,HKG,,105,0.4857
+ng-tze-yong,NG Tze Yong,MAS,,40,0.55
+nguyen-hai-dang,NGUYEN Hai Dang,VIE,,13,0.3846
+nathan-tang,Nathan TANG,AUS,,2,0.0
+orijit-chaliha,Orijit CHALIHA,IND,,1,0.0
+park-sang-yong,PARK Sang Yong,KOR,,3,0.3333
+prannoy-h-s,PRANNOY H. S.,IND,,65,0.4615
+pui-pang-fong,PUI Pang Fong,MAC,,2,0.0
+pablo-abian,Pablo ABIAN,ESP,,8,0.375
+prahdiska-bagas-shujiwo,Prahdiska Bagas SHUJIWO,INA,,3,0.6667
+priyanshu-rajawat,Priyanshu RAJAWAT,IND,,61,0.4098
+qualification-q2,Qualification - Q2,,,1,0.0
+raghu-mariswamy,Raghu MARISWAMY,IND,,2,0.0
+rasmus-gemke,Rasmus GEMKE,DEN,,97,0.4639
+ravi-ravi,Ravi RAVI,IND,,2,0.0
+ricky-tang,Ricky TANG,AUS,,3,0.0
+riki-takei,Riki TAKEI,JPN,,2,0.0
+riku-hatano,Riku HATANO,JPN,,18,0.5
+rithvik-sanjeevi-satish-kumar,Rithvik Sanjeevi SATISH KUMAR,IND,,7,0.2857
+s-sankar-muthusamy-subramanian,S.Sankar Muthusamy SUBRAMANIAN,IND,,34,0.2941
+sai-praneeth-b,SAI PRANEETH B.,IND,,5,0.4
+shi-yu-qi,SHI Yu Qi,CHN,,117,0.7949
+son-wan-ho,SON Wan Ho,KOR,,3,0.0
+soong-joo-ven,SOONG Joo Ven,MAS,,12,0.4167
+su-li-yang,SU Li Yang,,,92,0.3804
+sam-yuan,Sam YUAN,CAN,,1,0.0
+sameer-verma,Sameer VERMA,IND,,7,0.2857
+saneeth-dayanand,Saneeth DAYANAND,IND,,3,0.3333
+saran-jamsri,Saran JAMSRI,THA,,5,0.2
+sathish-kumar-karunakaran,Sathish Kumar KARUNAKARAN,IND,,23,0.3478
+shashwat-dalal,Shashwat DALAL,IND,,1,0.0
+shesar-hiren-rhustavito,Shesar Hiren RHUSTAVITO,INA,,14,0.3571
+shogo-ogawa,Shogo OGAWA,JPN,,15,0.6
+sholeh-aidil,Sholeh AIDIL,MAS,,15,0.3333
+siddhanth-gupta,Siddhanth GUPTA,IND,,2,0.5
+siddharth-pratap-singh,Siddharth Pratap SINGH,IND,,1,0.0
+sitthikom-thammasin,Sitthikom THAMMASIN,THA,,2,0.0
+tan-jia-jie,TAN Jia Jie,MAS,,3,0.0
+ting-yen-chen,TING Yen-Chen,TPE,,6,0.5
+takuma-obayashi,Takuma OBAYASHI,JPN,,52,0.4038
+tarun-reddy-katam,Tarun Reddy KATAM,IND,,1,0.0
+tobias-kuenzi,Tobias KUENZI,SUI,,3,0.0
+tommy-sugiarto,Tommy SUGIARTO,INA,,1,0.0
+uriel-francisco-canjura-artiga,Uriel Francisco CANJURA ARTIGA,ESA,,6,0.5
+victor-svendsen,Victor SVENDSEN,DEN,,1,0.0
+victor-rding-kauffmann,Victor ørding KAUFFMANN,DEN,,1,0.0
+viktor-axelsen,Viktor AXELSEN,DEN,,85,0.7882
+viren-nettasinghe,Viren NETTASINGHE,SRI,,8,0.375
+wang-po-wei,WANG Po-Wei,TPE,,25,0.36
+wang-yu-kai,WANG Yu-Kai,TPE,,1,0.0
+weng-hong-yang,WENG Hong Yang,CHN,,95,0.5368
+xiaodong-sheng,Xiaodong SHENG,CAN,,6,0.0
+yoo-tae-bin,YOO Tae Bin,KOR,,1,0.0
+ygor-coelho,Ygor COELHO,BRA,,11,0.2727
+yohanes-saut-marcellyno,Yohanes Saut MARCELLYNO,INA,,10,0.4
+yudai-okimoto,Yudai OKIMOTO,JPN,,12,0.6667
+zhao-jun-peng,ZHAO Jun Peng,CHN,,25,0.44
+zhu-xuan-chen,ZHU Xuan Chen,CHN,,14,0.5714
