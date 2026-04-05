@@ -1,1 +1,1 @@
-# CS47B
+# Shuttle-IQ Project
