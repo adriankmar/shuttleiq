@@ -334,95 +334,101 @@ def _parse_from_page_text(text: str, tournament_id: int, slug: str) -> DrawData:
     #   - "#N: score" match result lines
     #   - "RET" retirement markers
 
-    # Regex patterns
-    SCORE_RE = re.compile(r"^#\d+:")
-    SEEDING_RE = re.compile(r"^\((\d+)\)$")
-    COUNTRY_RE = re.compile(r"^[A-Z]{2,3}$")  # 2-3 uppercase letters
-    NAME_RE = re.compile(r"[A-Za-zÀ-ÿ]")      # has at least one letter
-
     def parse_round_players(lines_: list[str]) -> list[dict]:
         """
-        Returns a list of player dicts:
-          {name, nationality, seeding, score, duration, match_num}
+        Parse player entries from a single round's text lines.
+
+        Playwright's inner_text() delivers scores as raw integers — one per
+        line or space-separated — NOT as '#N: 21-15, 21-18' strings.
+        The structure per player entry is:
+
+          [bracket-position integers — R32 only, BEFORE first player]
+          Player Name
+          (seeding)          ← optional
+          <score integers>   ← from their PREVIOUS round match (R16+ only)
+          RET                ← optional; means this player's opponent retired
+
+        Score integers arrive as pairs (p1_pts, p2_pts) per game.
+        [21, 15, 21, 18] → "21-15 21-18".
+        Bracket-position integers (only in R32, before any player) are ignored.
         """
-        players = []
-        i = 0
-        while i < len(lines_):
-            line = lines_[i]
+        players: list[dict] = []
+        score_ints: list[int] = []
+        seen_any_player = False
 
-            # Skip score lines — they'll be picked up when we see the player
-            if SCORE_RE.match(line):
-                if players:
-                    score_str, duration = _parse_score_text(line)
-                    players[-1]["score"] = score_str
-                    players[-1]["duration"] = duration
-                    # Extract match number
-                    m = re.match(r"^#(\d+):", line)
-                    if m:
-                        players[-1]["match_num"] = int(m.group(1))
-                i += 1
+        _SEED_RE  = re.compile(r'^\((\d+)\)$')
+        _CTRY_RE  = re.compile(r'^[A-Z]{2,3}$')   # country codes / short tokens
+        _SKIP_PRE = (
+            "printed:", "prize", "stadium", "venue", "score",
+            "draw size", "type", "main draw",
+            "jan ", "feb ", "mar ", "apr ", "may ", "jun ",
+            "jul ", "aug ", "sep ", "oct ", "nov ", "dec ",
+            "monday", "tuesday", "wednesday", "thursday",
+            "friday", "saturday", "sunday",
+        )
+
+        def _flush():
+            """Assign accumulated integers as score to the last player."""
+            if players and score_ints:
+                pairs = []
+                for j in range(0, len(score_ints) - 1, 2):
+                    pairs.append(f"{score_ints[j]}-{score_ints[j + 1]}")
+                if pairs:
+                    players[-1]["score"] = " ".join(pairs)
+            score_ints.clear()
+
+        for line in lines_:
+            # ── Pure integer ──────────────────────────────────────────────
+            if re.match(r'^\d+$', line):
+                if seen_any_player:
+                    score_ints.append(int(line))
+                # else: bracket position before first player (R32), skip
                 continue
 
-            # Seeding marker "(N)"
-            if SEEDING_RE.match(line):
-                if players:
-                    players[-1]["seeding"] = int(SEEDING_RE.match(line).group(1))
-                i += 1
+            # ── Space-separated integers on one line ──────────────────────
+            parts = line.split()
+            if parts and len(parts) > 1 and all(re.match(r'^\d+$', p) for p in parts):
+                if seen_any_player:
+                    score_ints.extend(int(p) for p in parts)
                 continue
 
-            # Skip standalone "RET" / "W.O." — already handled via score
-            upper = line.upper()
-            if upper in ("RET", "W.O.", "W/O", "RETIRED", "WALKOVER"):
+            # ── Seeding "(N)" ─────────────────────────────────────────────
+            sm = _SEED_RE.match(line)
+            if sm:
+                if players:
+                    players[-1]["seeding"] = int(sm.group(1))
+                continue
+
+            # ── Retirement / walkover ─────────────────────────────────────
+            if line.upper() in ("RET", "W.O.", "W/O", "RETIRED", "WALKOVER"):
                 if players:
                     players[-1]["retired"] = True
-                i += 1
                 continue
 
-            # Country code (3 uppercase letters like "CHN", "MAS")
-            if COUNTRY_RE.match(line) and len(line) <= 3:
-                # Next non-empty line should be the player name
-                nationality = line
-                j = i + 1
-                while j < len(lines_) and not lines_[j].strip():
-                    j += 1
-                if j < len(lines_) and NAME_RE.search(lines_[j]):
-                    players.append({
-                        "name": lines_[j],
-                        "nationality": nationality,
-                        "seeding": None,
-                        "score": None,
-                        "duration": None,
-                        "match_num": None,
-                        "retired": False,
-                    })
-                    i = j + 1
-                    continue
+            # ── Skip known noise ──────────────────────────────────────────
+            lower_l = line.lower()
+            if any(lower_l.startswith(p) for p in _SKIP_PRE):
+                continue
 
-            # Player name without preceding country code (fallback)
-            # Heuristic: long enough, contains letters, not a score/heading
-            if (NAME_RE.search(line)
-                    and len(line) >= 3
-                    and not SCORE_RE.match(line)
-                    and not line.startswith("Printed:")
-                    and not line.startswith("Prize")
-                    and not line.startswith("STADIUM")
-                    and not any(line.lower().startswith(h) for h in
-                                ["round", "quarter", "semi", "final", "jan ", "feb ",
-                                 "mar ", "apr ", "may ", "jun ", "jul ", "aug ",
-                                 "sep ", "oct ", "nov ", "dec ", "score", "draw",
-                                 "size", "type", "main"])):
-                if not players or players[-1].get("name"):
-                    players.append({
-                        "name": line,
-                        "nationality": "",
-                        "seeding": None,
-                        "score": None,
-                        "duration": None,
-                        "match_num": None,
-                        "retired": False,
-                    })
-            i += 1
+            # ── Skip 2-3 uppercase-only tokens (country codes, etc.) ──────
+            if _CTRY_RE.match(line):
+                continue
 
+            # ── Player name ───────────────────────────────────────────────
+            if re.search(r'[A-Za-zÀ-ÿ]', line) and len(line) >= 3:
+                _flush()   # commit previous player's score before starting new
+                players.append({
+                    "name": line,
+                    "nationality": "",
+                    "seeding": None,
+                    "score": None,
+                    "duration": None,
+                    "match_num": None,
+                    "retired": False,
+                })
+                seen_any_player = True
+
+        _flush()   # commit last player
         return players
 
     round_players: dict[str, list[dict]] = {}
@@ -579,7 +585,37 @@ async def scrape_draw(
             await asyncio.sleep(delay)
 
         page_text = await page.inner_text("body")
-        return _parse_from_page_text(page_text, tournament_id, slug)
+        draw = _parse_from_page_text(page_text, tournament_id, slug)
+
+        # ── Enrich nationalities via JS (flag images have alt text) ──────
+        try:
+            nat_map: dict = await page.evaluate("""
+            () => {
+                const result = {};
+                document.querySelectorAll('a[href*="/player/"]').forEach(link => {
+                    const name = link.textContent.trim();
+                    if (!name || name.length < 2) return;
+                    // Look for flag img in the same container
+                    const container = link.closest('li, tr, [class*="player"], [class*="entry"]')
+                                      || link.parentElement;
+                    if (!container) return;
+                    const img = container.querySelector('img');
+                    if (!img) return;
+                    const nat = (img.alt || img.title || '').trim().toUpperCase();
+                    if (/^[A-Z]{2,3}$/.test(nat)) result[name] = nat;
+                });
+                return result;
+            }
+            """)
+            if nat_map:
+                for match in draw.matches:
+                    for player in (match.player1, match.player2):
+                        if not player.nationality:
+                            player.nationality = nat_map.get(player.name, "")
+        except Exception as nat_exc:
+            logger.debug("Nationality JS extraction failed: %s", nat_exc)
+
+        return draw
 
     except Exception as exc:
         logger.error("Error scraping draw %d (%s): %s", tournament_id, slug, exc)
