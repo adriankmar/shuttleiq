@@ -327,7 +327,7 @@ elif page == "👤 Player Profile":
             height=380,
             margin=dict(l=20, r=20, t=20, b=20),
             xaxis=dict(title="", showgrid=False, color="white", tickfont=dict(color="white")),
-            yaxis=dict(title="PAR Score", zeroline=False, gridcolor="rgba(255,255,255,0.1)", color="white", tickfont=dict(color="white"), titlefont=dict(color="white")),
+            yaxis=dict(title=dict(text="PAR Score", font=dict(color="white")), zeroline=False, gridcolor="rgba(255,255,255,0.1)", color="white", tickfont=dict(color="white")),
             plot_bgcolor="rgba(0,0,0,0)",
             paper_bgcolor="rgba(0,0,0,0)",
             font=dict(color="white"),
