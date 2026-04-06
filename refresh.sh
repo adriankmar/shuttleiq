@@ -7,15 +7,16 @@ cd "$(dirname "$0")"
 echo "🏸 ShuttleIQ Data Refresh Starting..."
 echo "======================================"
 
-# Step 1 — Scrape latest BWF data
+# Step 1 — Scrape latest BWF data (both disciplines)
 echo ""
-echo "📡 Step 1/3 — Scraping BWF World Tour data..."
-python3 run_pipeline.py --years 2023 2024 2025 2026 --skip-if-cached
+echo "📡 Step 1/3 — Scraping BWF World Tour data (MS + WS)..."
+python3 run_pipeline.py --years 2023 2024 2025 2026 --discipline ms ws --skip-if-cached
 
-# Step 2 — Recalculate PAR scores
+# Step 2 — Recalculate PAR scores for both disciplines
 echo ""
-echo "📊 Step 2/3 — Recalculating PAR scores..."
-python3 model/par_calculator.py
+echo "📊 Step 2/3 — Recalculating PAR scores (MS + WS)..."
+python3 model/par_calculator.py --discipline ms
+python3 model/par_calculator.py --discipline ws
 
 # Step 3 — Push to GitHub
 echo ""

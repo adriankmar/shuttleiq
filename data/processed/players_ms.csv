@@ -1,0 +1,191 @@
+player_id,name,nationality,current_world_ranking,matches_played,win_rate,discipline
+lin-chun-yi,LIN Chun-Yi,TPE,1.0,135,0.6296,MS
+alwi-farhan,Alwi FARHAN,INA,2.0,71,0.6338,MS
+kunlavut-vitidsarn,Kunlavut VITIDSARN,THA,3.0,124,0.7339,MS
+lakshya-sen,Lakshya SEN,IND,4.0,102,0.5588,MS
+yushi-tanaka,Yushi TANAKA,JPN,5.0,81,0.5185,MS
+chi-yu-jen,CHI Yu Jen,TPE,6.0,88,0.4659,MS
+chou-tien-chen,CHOU Tien Chen,TPE,7.0,175,0.6229,MS
+loh-kean-yew,LOH Kean Yew,SGP,8.0,118,0.5678,MS
+jia-heng-jason-teh,Jia Heng Jason TEH,SGP,9.0,77,0.5195,MS
+christo-popov,Christo POPOV,FRA,10.0,105,0.581,MS
+jonatan-christie,Jonatan CHRISTIE,INA,11.0,120,0.7083,MS
+tharun-mannepalli,Tharun MANNEPALLI,IND,12.0,33,0.4545,MS
+toma-junior-popov,Toma Junior POPOV,FRA,13.0,96,0.5,MS
+jason-gunawan,Jason GUNAWAN,HKG,14.0,54,0.537,MS
+victor-lai,Victor LAI,CAN,15.0,27,0.5926,MS
+koki-watanabe,Koki WATANABE,JPN,16.0,90,0.5556,MS
+nhat-nguyen,Nhat NGUYEN,IRL,17.0,68,0.4265,MS
+kidambi-srikanth,KIDAMBI Srikanth,IND,18.0,72,0.4722,MS
+kiran-george,Kiran GEORGE,IND,19.0,67,0.3582,MS
+alex-lanier,Alex LANIER,FRA,20.0,81,0.679,MS
+brian-yang,Brian YANG,CAN,21.0,85,0.3529,MS
+panitchaphon-teeraratsakul,Panitchaphon TEERARATSAKUL,THA,22.0,33,0.6061,MS
+wang-tzu-wei,WANG Tzu Wei,TPE,23.0,106,0.4057,MS
+wang-zheng-xing,WANG Zheng Xing,CHN,24.0,48,0.4792,MS
+ayush-shetty,Ayush SHETTY,IND,25.0,56,0.4821,MS
+aaron-sonnenschein,Aaron SONNENSCHEIN,GER,,1,0.0,MS
+abhinav-thakur,Abhinav THAKUR,IND,,1,0.0,MS
+abhishek-yeligar,Abhishek YELIGAR,IND,,1,0.0,MS
+ade-resky-dwicahyo,Ade Resky DWICAHYO,AZE,,7,0.1429,MS
+alap-mishra,Alap MISHRA,IND,,4,0.25,MS
+anders-antonsen,Anders ANTONSEN,DEN,,127,0.6929,MS
+anthony-sinisuka-ginting,Anthony Sinisuka GINTING,INA,,79,0.5823,MS
+aria-dinata,Aria DINATA,CRO,,1,0.0,MS
+arnaud-merkle,Arnaud MERKLE,FRA,,33,0.3636,MS
+arya-bhivpathaki,Arya BHIVPATHAKI,IND,,1,0.0,MS
+asher-jing-jie-ooi,Asher Jing Jie OOI,AUS,,2,0.5,MS
+b-m-rahul-bharadwaj,B.M.Rahul BHARADWAJ,IND,,2,0.5,MS
+bharat-raghav,Bharat RAGHAV,IND,,1,0.0,MS
+chan-yin-chak,CHAN Yin Chak,HKG,,9,0.1111,MS
+cheam-june-wei,CHEAM June Wei,MAS,,24,0.2917,MS
+chen-chi-ting,CHEN Chi Ting,TPE,,1,0.0,MS
+cheng-kai,CHENG Kai,TPE,,1,0.0,MS
+cho-geon-yeop,CHO Geon Yeop,KOR,,7,0.7143,MS
+cho-hyeon-woo,CHO Hyeon Woo,KOR,,2,0.5,MS
+choi-jihoon,CHOI JIHOON,KOR,,1,0.0,MS
+choi-pyeong-gang,CHOI Pyeong Gang,KOR,,1,0.0,MS
+chico-aura-dwi-wardoyo,Chico Aura DWI WARDOYO,,,50,0.38,MS
+chirag-sen,Chirag SEN,IND,,4,0.0,MS
+christian-adinata,Christian ADINATA,INA,,3,0.3333,MS
+collins-valentine-filimon,Collins Valentine FILIMON,AUT,,2,0.5,MS
+danylo-bosniuk,DANYLO BOSNIUK,UKR,,1,0.0,MS
+do-dong-wook,DO Dong Wook,KOR,,1,0.0,MS
+dong-tian-yao,DONG Tian Yao,CHN,,4,0.5,MS
+daniil-dubovenko,Daniil DUBOVENKO,ISR,,12,0.3333,MS
+dicky-dwi-pangestu,Dicky Dwi PANGESTU,AZE,,1,0.0,MS
+ditlev-jaeger-holm,Ditlev Jaeger HOLM,DEN,,6,0.5,MS
+dmitriy-panarin,Dmitriy PANARIN,KAZ,,9,0.2222,MS
+edward-lau,Edward LAU,NZL,,2,0.0,MS
+enogat-roy,Enogat ROY,FRA,,6,0.1667,MS
+enrico-keoni-asuncion,Enrico Keoni ASUNCION,USA,,2,0.0,MS
+eogene-ewe,Eogene EWE,MAS,,4,0.5,MS
+fabian-roth,Fabian ROTH,GER,,4,0.0,MS
+fabio-caponio,Fabio CAPONIO,ITA,,1,1.0,MS
+garret-tan,Garret TAN,USA,,1,0.0,MS
+giovanni-toti,Giovanni TOTI,ITA,,7,0.2857,MS
+heo-kwang-hee,HEO Kwang Hee,KOR,,2,0.5,MS
+hu-zhe-an,HU Zhe An,CHN,,9,0.5556,MS
+huang-ping-hsien,HUANG Ping-Hsien,TPE,,10,0.2,MS
+huang-yu-kai,HUANG Yu Kai,TPE,,22,0.1818,MS
+hans-kristian-solberg-vittinghus,Hans-Kristian Solberg VITTINGHUS,DEN,,5,0.2,MS
+harry-huang,Harry HUANG,ENG,,7,0.4286,MS
+howard-shu,Howard SHU,USA,,1,0.0,MS
+jeon-hyeok-jin,JEON Hyeok Jin,KOR,,51,0.4314,MS
+jeong-min-seon,JEONG Min Seon,KOR,,3,0.3333,MS
+jack-yu,Jack YU,AUS,,1,0.0,MS
+jakob-houe,Jakob HOUE,DEN,,1,0.0,MS
+jayden-lim,Jayden LIM,AUS,,1,0.0,MS
+jie-ying-chan,Jie Ying CHAN,AUS,,1,0.0,MS
+joakim-oldorff,Joakim OLDORFF,FIN,,17,0.1176,MS
+jonathan-matias,Jonathan MATIAS,BRA,,7,0.2857,MS
+joran-kweekel,Joran KWEEKEL,NED,,2,0.0,MS
+julien-carraggi,Julien CARRAGGI,BEL,,37,0.2162,MS
+julien-scheiwiller,Julien SCHEIWILLER,SUI,,1,0.0,MS
+justin-hoh,Justin HOH,MAS,,44,0.4091,MS
+kim-byung-jae,KIM Byung Jae,KOR,,2,0.0,MS
+kim-donghun,KIM DongHun,KOR,,2,0.5,MS
+kok-jing-hong,KOK Jing Hong,MAS,,9,0.3333,MS
+kuo-kuan-lin,KUO Kuan Lin,TPE,,11,0.4545,MS
+kai-schaefer,Kai SCHAEFER,GER,,5,0.2,MS
+kalle-koljonen,Kalle KOLJONEN,FIN,,28,0.2857,MS
+kanta-tsuneyama,Kanta TSUNEYAMA,JPN,,34,0.4412,MS
+kantaphon-wangcharoen,Kantaphon WANGCHAROEN,THA,,71,0.2676,MS
+karono-karono,Karono KARONO,AUS,,1,0.0,MS
+kartikey-gulshan-kumar,Kartikey GULSHAN KUMAR,IND,,1,0.0,MS
+kavin-thangam-kavin,Kavin Thangam KAVIN,IND,,1,0.0,MS
+kenta-nishimoto,Kenta NISHIMOTO,JPN,,125,0.536,MS
+kento-momota,Kento MOMOTA,JPN,,13,0.4615,MS
+kevin-cordon,Kevin CORDON,GUA,,3,0.3333,MS
+kian-yu-oei,Kian-Yu OEI,GER,,1,0.0,MS
+kodai-naraoka,Kodai NARAOKA,JPN,,126,0.627,MS
+koo-takahashi,Koo TAKAHASHI,JPN,,34,0.4412,MS
+le-duc-phat,LE Duc Phat,VIE,,7,0.2857,MS
+lee-cheuk-yiu,LEE Cheuk Yiu,HKG,,95,0.4737,MS
+lee-chia-hao,LEE Chia Hao,TPE,,93,0.3978,MS
+lee-yun-gyu,LEE Yun Gyu,KOR,,2,0.0,MS
+lee-zii-jia,LEE Zii Jia,MAS,,85,0.6,MS
+lei-lan-xi,LEI Lan Xi,CHN,,58,0.3966,MS
+leong-jun-hao,LEONG Jun Hao,MAS,,75,0.4,MS
+li-shi-feng,LI Shi Feng,CHN,,115,0.6783,MS
+liao-jhuo-fu,LIAO Jhuo-Fu,TPE,,22,0.4091,MS
+liew-daren,LIEW Daren,MAS,,3,0.3333,MS
+liu-liang,LIU Liang,CHN,,5,0.6,MS
+lu-guang-zu,LU Guang Zu,CHN,,98,0.5102,MS
+lakshay-sharma,Lakshay SHARMA,IND,,1,0.0,MS
+lucas-claerbout,Lucas CLAERBOUT,FRA,,5,0.4,MS
+luis-armando-montoya-navarro,Luis Armando MONTOYA NAVARRO,MEX,,1,0.0,MS
+luis-ramon-garrido,Luis Ramon GARRIDO,MEX,,1,0.0,MS
+luka-wraber,Luka WRABER,AUT,,1,1.0,MS
+lu-s-enrique-pe-alver,Luís Enrique PEÑALVER,ESP,,3,0.0,MS
+mads-christophersen,Mads CHRISTOPHERSEN,DEN,,22,0.3182,MS
+magnus-johannesen,Magnus JOHANNESEN,DEN,,52,0.3654,MS
+manraj-singh,Manraj SINGH,IND,,5,0.4,MS
+mark-caljouw,Mark CALJOUW,NED,,11,0.3636,MS
+matthias-kicklitz,Matthias KICKLITZ,GER,,5,0.4,MS
+max-weisskirchen,Max WEISSKIRCHEN,GER,,3,0.0,MS
+meiraba-luwang-maisnam,Meiraba Luwang MAISNAM,IND,,9,0.4444,MS
+mikolaj-szymanowski,Mikolaj SZYMANOWSKI,POL,,1,0.0,MS
+minoru-koga,Minoru KOGA,JPN,,8,0.625,MS
+misha-zilberman,Misha ZILBERMAN,ISR,,26,0.2308,MS
+mithun-manjunath,Mithun MANJUNATH,IND,,23,0.3043,MS
+moh-zaki-ubaidillah,Moh. Zaki UBAIDILLAH,INA,,20,0.55,MS
+muhamad-yusuf,Muhamad YUSUF,INA,,2,0.0,MS
+ng-ka-long-angus,NG Ka Long Angus,HKG,,105,0.4857,MS
+ng-tze-yong,NG Tze Yong,MAS,,40,0.55,MS
+nguyen-hai-dang,NGUYEN Hai Dang,VIE,,13,0.3846,MS
+nathan-tang,Nathan TANG,AUS,,2,0.0,MS
+orijit-chaliha,Orijit CHALIHA,IND,,1,0.0,MS
+park-sang-yong,PARK Sang Yong,KOR,,3,0.3333,MS
+prannoy-h-s,PRANNOY H. S.,IND,,65,0.4615,MS
+pui-pang-fong,PUI Pang Fong,MAC,,2,0.0,MS
+pablo-abian,Pablo ABIAN,ESP,,8,0.375,MS
+prahdiska-bagas-shujiwo,Prahdiska Bagas SHUJIWO,INA,,3,0.6667,MS
+priyanshu-rajawat,Priyanshu RAJAWAT,IND,,61,0.4098,MS
+qualification-q2,Qualification - Q2,,,1,0.0,MS
+raghu-mariswamy,Raghu MARISWAMY,IND,,2,0.0,MS
+rasmus-gemke,Rasmus GEMKE,DEN,,97,0.4639,MS
+ravi-ravi,Ravi RAVI,IND,,2,0.0,MS
+ricky-tang,Ricky TANG,AUS,,3,0.0,MS
+riki-takei,Riki TAKEI,JPN,,2,0.0,MS
+riku-hatano,Riku HATANO,JPN,,18,0.5,MS
+rithvik-sanjeevi-satish-kumar,Rithvik Sanjeevi SATISH KUMAR,IND,,7,0.2857,MS
+s-sankar-muthusamy-subramanian,S.Sankar Muthusamy SUBRAMANIAN,IND,,34,0.2941,MS
+sai-praneeth-b,SAI PRANEETH B.,IND,,5,0.4,MS
+shi-yu-qi,SHI Yu Qi,CHN,,117,0.7949,MS
+son-wan-ho,SON Wan Ho,KOR,,3,0.0,MS
+soong-joo-ven,SOONG Joo Ven,MAS,,12,0.4167,MS
+su-li-yang,SU Li Yang,,,92,0.3804,MS
+sam-yuan,Sam YUAN,CAN,,1,0.0,MS
+sameer-verma,Sameer VERMA,IND,,7,0.2857,MS
+saneeth-dayanand,Saneeth DAYANAND,IND,,3,0.3333,MS
+saran-jamsri,Saran JAMSRI,THA,,5,0.2,MS
+sathish-kumar-karunakaran,Sathish Kumar KARUNAKARAN,IND,,23,0.3478,MS
+shashwat-dalal,Shashwat DALAL,IND,,1,0.0,MS
+shesar-hiren-rhustavito,Shesar Hiren RHUSTAVITO,INA,,14,0.3571,MS
+shogo-ogawa,Shogo OGAWA,JPN,,15,0.6,MS
+sholeh-aidil,Sholeh AIDIL,MAS,,15,0.3333,MS
+siddhanth-gupta,Siddhanth GUPTA,IND,,2,0.5,MS
+siddharth-pratap-singh,Siddharth Pratap SINGH,IND,,1,0.0,MS
+sitthikom-thammasin,Sitthikom THAMMASIN,THA,,2,0.0,MS
+tan-jia-jie,TAN Jia Jie,MAS,,3,0.0,MS
+ting-yen-chen,TING Yen-Chen,TPE,,6,0.5,MS
+takuma-obayashi,Takuma OBAYASHI,JPN,,52,0.4038,MS
+tarun-reddy-katam,Tarun Reddy KATAM,IND,,1,0.0,MS
+tobias-kuenzi,Tobias KUENZI,SUI,,3,0.0,MS
+tommy-sugiarto,Tommy SUGIARTO,INA,,1,0.0,MS
+uriel-francisco-canjura-artiga,Uriel Francisco CANJURA ARTIGA,ESA,,6,0.5,MS
+victor-svendsen,Victor SVENDSEN,DEN,,1,0.0,MS
+victor-rding-kauffmann,Victor ørding KAUFFMANN,DEN,,1,0.0,MS
+viktor-axelsen,Viktor AXELSEN,DEN,,85,0.7882,MS
+viren-nettasinghe,Viren NETTASINGHE,SRI,,8,0.375,MS
+wang-po-wei,WANG Po-Wei,TPE,,25,0.36,MS
+wang-yu-kai,WANG Yu-Kai,TPE,,1,0.0,MS
+weng-hong-yang,WENG Hong Yang,CHN,,95,0.5368,MS
+xiaodong-sheng,Xiaodong SHENG,CAN,,6,0.0,MS
+yoo-tae-bin,YOO Tae Bin,KOR,,1,0.0,MS
+ygor-coelho,Ygor COELHO,BRA,,11,0.2727,MS
+yohanes-saut-marcellyno,Yohanes Saut MARCELLYNO,INA,,10,0.4,MS
+yudai-okimoto,Yudai OKIMOTO,JPN,,12,0.6667,MS
+zhao-jun-peng,ZHAO Jun Peng,CHN,,25,0.44,MS
+zhu-xuan-chen,ZHU Xuan Chen,CHN,,14,0.5714,MS

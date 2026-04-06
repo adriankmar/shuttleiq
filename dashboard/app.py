@@ -45,11 +45,12 @@ TIER_ORDER = ["Elite", "Above Average", "Average", "Below Average"]
 
 # ── Data loading ──────────────────────────────────────────────────────────────
 @st.cache_data
-def load_data():
-    par_scores   = pd.read_csv(DATA_DIR / "par_scores.csv")
-    par_timeline = pd.read_csv(DATA_DIR / "par_timeline.csv")
+def load_data(discipline: str = "ms"):
+    disc = discipline.lower()
+    par_scores   = pd.read_csv(DATA_DIR / f"par_scores_{disc}.csv")
+    par_timeline = pd.read_csv(DATA_DIR / f"par_timeline_{disc}.csv")
     tournaments  = pd.read_csv(PROC_DIR / "tournaments.csv")
-    players      = pd.read_csv(PROC_DIR / "players.csv")
+    players      = pd.read_csv(PROC_DIR / f"players_{disc}.csv")
 
     # Parse dates
     par_timeline["date"] = pd.to_datetime(par_timeline["date"])
@@ -63,9 +64,6 @@ def load_data():
     )
 
     return par_scores, par_timeline, tournaments, players
-
-
-par_scores, par_timeline, tournaments, players = load_data()
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -98,7 +96,16 @@ def fmt_pct(v) -> str:
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("## 🏸 ShuttleIQ")
-    st.caption("BWF Men's Singles Analytics")
+    st.caption("BWF World Tour Analytics")
+    st.divider()
+
+    discipline_label = st.radio(
+        "Discipline",
+        ["👨 Men's Singles", "👩 Women's Singles"],
+        index=0,
+    )
+    discipline = "ms" if "Men" in discipline_label else "ws"
+
     st.divider()
     page = st.radio(
         "Navigate",
@@ -106,6 +113,10 @@ with st.sidebar:
         label_visibility="collapsed",
     )
     st.divider()
+
+par_scores, par_timeline, tournaments, players = load_data(discipline)
+
+with st.sidebar:
     st.caption(f"📊 {len(par_scores)} players · {len(par_timeline)} tournament entries")
     st.caption("Data: BWF World Tour 2023–2026")
 
@@ -113,9 +124,11 @@ with st.sidebar:
 # ══════════════════════════════════════════════════════════════════════════════
 # PAGE 1 — LEADERBOARD
 # ══════════════════════════════════════════════════════════════════════════════
+disc_label = "Men's Singles" if discipline == "ms" else "Women's Singles"
+
 if page == "🏆 Leaderboard":
-    st.title("🏆 ShuttleIQ — BWF Men's Singles Player Rankings")
-    st.caption("Performance Above Replacement (PAR) rankings based on 2023–2026 BWF World Tour match data")
+    st.title(f"🏆 ShuttleIQ — BWF {disc_label} Player Rankings")
+    st.caption(f"Performance Above Replacement (PAR) rankings based on 2023–2026 BWF World Tour {disc_label} data")
 
     # ── Filters ───────────────────────────────────────────────────────────────
     col_search, col_tier, col_nat = st.columns([3, 2, 2])
@@ -206,7 +219,7 @@ if page == "🏆 Leaderboard":
 # PAGE 2 — PLAYER PROFILE
 # ══════════════════════════════════════════════════════════════════════════════
 elif page == "👤 Player Profile":
-    st.title("👤 Player Profile")
+    st.title(f"👤 Player Profile — {disc_label}")
 
     all_players = sorted(par_scores["player_name"].dropna().unique())
     default_idx = all_players.index("SHI Yu Qi") if "SHI Yu Qi" in all_players else 0

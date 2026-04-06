@@ -50,12 +50,7 @@ _PROJECT    = _MODEL_DIR.parent                         # .../shuttleiq/
 _DATA_DIR   = _PROJECT / "data"
 _PROC_DIR   = _DATA_DIR / "processed"
 
-MATCHES_CSV     = _PROC_DIR / "matches.csv"
 TOURNAMENTS_CSV = _PROC_DIR / "tournaments.csv"
-PLAYERS_CSV     = _PROC_DIR / "players.csv"
-
-OUT_SCORES   = _DATA_DIR / "par_scores.csv"
-OUT_TIMELINE = _DATA_DIR / "par_timeline.csv"
 
 
 # ── Constants ─────────────────────────────────────────────────────────────────
@@ -464,11 +459,12 @@ def compute_timeline(appearances: pd.DataFrame, replacement_level: float) -> pd.
 
 # ── I/O helpers ───────────────────────────────────────────────────────────────
 
-def _load_csvs(data_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def _load_csvs(data_dir: Path, discipline: str = "ms") -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     proc = data_dir / "processed"
-    matches     = pd.read_csv(proc / "matches.csv")
+    disc = discipline.lower()
+    matches     = pd.read_csv(proc / f"matches_{disc}.csv")
     tournaments = pd.read_csv(proc / "tournaments.csv")
-    players     = pd.read_csv(proc / "players.csv")
+    players     = pd.read_csv(proc / f"players_{disc}.csv")
 
     # Coerce numeric columns that may have loaded as object/float with NaN
     for col in ["p1_world_ranking", "p2_world_ranking", "p1_seeding", "p2_seeding"]:
@@ -481,12 +477,13 @@ def _print_results(
     par_df: pd.DataFrame,
     replacement_level: float,
     skipped: list[str],
+    discipline: str = "MS",
 ) -> None:
     """Pretty-print PAR summary to stdout."""
     SEP = "─" * 72
 
     print(f"\n{SEP}")
-    print(f"  ShuttleIQ PAR Calculator — Results")
+    print(f"  ShuttleIQ PAR Calculator — {discipline.upper()} Results")
     print(SEP)
     print(f"\n  Replacement level baseline : {replacement_level:.4f}")
     print(f"  (mean match score of unseeded / unranked appearances)\n")
@@ -548,16 +545,17 @@ def _print_results(
 
 # ── Entry point ───────────────────────────────────────────────────────────────
 
-def run(data_dir: Path) -> None:
+def run(data_dir: Path, discipline: str = "ms") -> None:
     global _skipped_global
     _skipped_global = []
+    disc = discipline.lower()
 
     # ── Load ──────────────────────────────────────────────────────────────
     try:
-        matches, tournaments, players = _load_csvs(data_dir)
+        matches, tournaments, players = _load_csvs(data_dir, discipline=disc)
     except FileNotFoundError as e:
         print(f"ERROR: Could not find CSV file: {e}", file=sys.stderr)
-        print("  Run 'python run_pipeline.py --test' first to generate the data.",
+        print(f"  Run 'python run_pipeline.py --discipline {disc}' first to generate the data.",
               file=sys.stderr)
         sys.exit(1)
 
@@ -579,8 +577,8 @@ def run(data_dir: Path) -> None:
     ]].round({"avg_match_score": 4, "best_match_score": 4})
 
     # ── Save ──────────────────────────────────────────────────────────────
-    out_scores   = data_dir / "par_scores.csv"
-    out_timeline = data_dir / "par_timeline.csv"
+    out_scores   = data_dir / f"par_scores_{disc}.csv"
+    out_timeline = data_dir / f"par_timeline_{disc}.csv"
 
     par_df.to_csv(out_scores, index=False)
     timeline_df.to_csv(out_timeline, index=False)
@@ -589,7 +587,7 @@ def run(data_dir: Path) -> None:
     print(f"  Saved {len(timeline_df)} timeline rows  → {out_timeline}")
 
     # ── Print summary ─────────────────────────────────────────────────────
-    _print_results(par_df, replacement_level, _skipped_global)
+    _print_results(par_df, replacement_level, _skipped_global, discipline=disc)
 
 
 def main() -> None:
@@ -600,8 +598,14 @@ def main() -> None:
         default=_DATA_DIR,
         help=f"Root data directory (default: {_DATA_DIR})",
     )
+    parser.add_argument(
+        "--discipline",
+        choices=["ms", "ws", "MS", "WS"],
+        default="ms",
+        help="Discipline to compute PAR for: ms or ws (default: ms)",
+    )
     args = parser.parse_args()
-    run(args.data_dir)
+    run(args.data_dir, discipline=args.discipline)
 
 
 if __name__ == "__main__":
