@@ -332,7 +332,7 @@ elif page == "👤 Player Profile":
             paper_bgcolor="rgba(0,0,0,0)",
             font=dict(color="white"),
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, font=dict(color="white")),
-            hovermode="x unified",
+            hovermode="closest",
         )
 
         st.plotly_chart(fig, use_container_width=True)
@@ -532,7 +532,7 @@ elif page == "⚔️ Head to Head":
             plot_bgcolor="white",
             paper_bgcolor="white",
             legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1),
-            hovermode="x unified",
+            hovermode="closest",
         )
 
         st.plotly_chart(fig2, use_container_width=True)
